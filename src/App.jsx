@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ServicesGrid from './components/ServicesGrid';
@@ -77,20 +77,18 @@ function BlogPage(){
 
 export default function App(){
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-white">
-        <Header />
-        <main className="pt-16">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main className="pt-16">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
